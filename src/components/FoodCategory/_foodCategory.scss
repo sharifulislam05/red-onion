@@ -1,0 +1,25 @@
+@use '../styles//button-shape';
+
+nav {
+    button {
+        border: none;
+        outline: none !important;
+        padding-bottom: 5px;
+        background: button-shape.$btn-text;
+        &.active {
+            border-bottom: 5px solid button-shape.$btn-bg;
+          }
+    }
+}
+
+.category-card {
+    border-style: none;
+    height:"330px";
+    &:hover {
+        box-shadow: 0px 0px 15px button-shape.$border-color;
+    }
+}
+
+.card-body {
+    border-style: none;
+}

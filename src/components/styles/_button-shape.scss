@@ -1,0 +1,14 @@
+$bg-color: white;
+$border-color: gray;
+$btn-bg: #F91944;
+$btn-text: #ffff;
+
+%button-design {
+    width: 160px;
+    height: 60px;
+    background-color: $bg-color;
+    border: 1px solid $border-color;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 40px;
+}

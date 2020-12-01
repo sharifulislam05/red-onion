@@ -1,0 +1,42 @@
+
+// %button-design {
+//     width: 160px;
+//     height: 60px;
+//     background-color: $bg-color;
+//     border: none;
+//     // border: 1px solid $border-color;
+//     padding: 10px 20px;
+//     text-decoration: none;
+//     border-radius: 40px;
+// }
+// .menu__cart {
+//     border:none;
+// }
+// .menu__cart {
+//    @extend %button-design;
+//     button {
+//         background: none;
+//         color: inherit;
+//         border: none;
+//         padding: 0;
+//         cursor: pointer;
+//         outline: none !important;
+//         font-size: "20px";
+//     }
+//     input {
+//         border-style: none;
+//         text-align: center;
+//         background: $bg-color !important;
+//         height: 35px;
+//         font-size: 25px;
+//         font-weight: bolder;
+//         // padding-bottom: 10px;
+//     }
+// }
+
+// .menu__btn--add {
+//     @extend %button-design;
+//     background: $btn-color;
+//     color: $bg-color;
+//     outline: none !important;
+// }

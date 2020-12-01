@@ -1,0 +1,21 @@
+@use '../../components/styles/button-shape';
+@use '../../components/styles/menuCart';
+
+.menu__cart {
+    @extend %button-design;
+    button {
+        @extend %quantity-btn;
+    }
+    input {
+        @extend %quantity-input;
+    }
+}
+
+.menu__btn--add {
+    @extend %button-design;
+    background: button-shape.$btn-bg;
+    color: button-shape.$btn-text;
+    height: 50px;
+    outline: none !important;
+}
+

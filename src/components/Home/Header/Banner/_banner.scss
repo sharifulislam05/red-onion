@@ -1,0 +1,39 @@
+@use '../../../styles/button-shape';
+
+.banner {
+    background: url(../../../../images/bannerbackground.png);
+    height: 480px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat
+    }
+.banner__input--container {
+    position: relative;
+  }
+  
+.banner__input--search {
+    @extend %button-design;
+    height: 40px;
+    width: 75%;
+    border: none;
+    &:focus {
+        outline: none;
+    }
+  }
+
+.banner__button {
+    @extend %button-design;
+    position: absolute; 
+    height: 40px;
+    right: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    background: button-shape.$btn-bg;
+    color: button-shape.$btn-text;
+    border: none;
+    width: 25%;
+    outline: none!important;
+  }
+  
+  

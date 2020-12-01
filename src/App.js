@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import Home from "./components/Home/Home/Home";
+import Login from "./components/Login/Login";
+import { createContext, useState } from "react";
+import OrderComplete from "./components/OrderComplete/OrderComplete";
+import MenuItem from "./components/MenuItem/MenuItem";
+import PlaceOrder from "./components/PlaceOrder/PlaceOrder/PlaceOrder";
+import NotFound from "./components/NotFound/NotFound";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
+export const UserContext = createContext();
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({});
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/home">
+            <Home />
+          </Route>
+          <Route path="/food/:foodId">
+            <MenuItem />
+          </Route>
+          <PrivateRoute exact path="/order">
+            <PlaceOrder />
+          </PrivateRoute>
+          <Route path="/orderConfirm">
+            <OrderComplete />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="*">
+            <NotFound />
+          </Route>
+        </Switch>
+      </Router>
+    </UserContext.Provider>
   );
 }
 

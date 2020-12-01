@@ -1,0 +1,21 @@
+@use './button-shape';
+
+%quantity-btn {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none !important;
+    font-size: "20px";
+}
+
+%quantity-input {
+    border-style: none;
+    text-align: center;
+    background: button-shape.$bg-color !important;
+    height: 35px;
+    font-size: 25px;
+    font-weight: bolder;
+    padding-bottom: 10px;
+}

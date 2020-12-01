@@ -1,0 +1,27 @@
+@use '../../styles//button-shape';
+$input-bg: rgb(223, 219, 219);
+
+.shipment__form {
+    display: flex;
+    flex-direction: column;
+    width: 35%
+}
+
+.shipment__input {
+    margin-top: 20px;
+    outline: 0 ;
+    border: none ;
+    height: 30px;
+    padding: 10px;
+    background-color: $input-bg;
+}
+
+.btn-delivery-form {
+    border-radius: 10px;
+    height: 30px;
+    color: button-shape.$btn-text;
+    background: button-shape.$btn-bg;
+    border: none ;
+    outline: 0 ;
+    margin-top: 30px;
+}

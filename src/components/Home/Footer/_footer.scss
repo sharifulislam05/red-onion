@@ -1,0 +1,10 @@
+$footer-bg: #191919;
+$text-color: #ffff;
+
+footer {
+    background: $footer-bg;
+    color: $text-color;
+    li {
+        list-style: none;
+    }
+}
